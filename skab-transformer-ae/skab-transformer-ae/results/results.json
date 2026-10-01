@@ -1,0 +1,169 @@
+{
+  "config": {
+    "data_root": "/home/claude/skab_repo/data",
+    "window": 30,
+    "label_mode": "last",
+    "quantile": 99.0,
+    "calibration": "recording",
+    "n_calib": 400,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "epochs": 50,
+    "variants": [
+      "original",
+      "latent"
+    ],
+    "pos_enc": false,
+    "score": "max_dim",
+    "skip_ae": true,
+    "out": "results",
+    "anomaly_ratio": 0.35652124773960214
+  },
+  "summary": {
+    "All anomalous (trivial)": {
+      "f1": {
+        "mean": 0.5256404915642574,
+        "std": 0.0
+      },
+      "precision": {
+        "mean": 0.35652124773960214,
+        "std": 0.0
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "flagged_fraction": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    },
+    "Fixed-position rule (diagnostic)": {
+      "f1": {
+        "mean": 0.9810370603509324,
+        "std": 0.0
+      },
+      "precision": {
+        "mean": 0.9740625,
+        "std": 0.0
+      },
+      "recall": {
+        "mean": 0.988112220637185,
+        "std": 0.0
+      },
+      "flagged_fraction": {
+        "mean": 0.3616636528028933,
+        "std": 0.0
+      }
+    },
+    "Isolation Forest": {
+      "auroc": {
+        "mean": 0.48792781929400547,
+        "std": 0.0026855517695326147
+      },
+      "auprc": {
+        "mean": 0.3496706998339358,
+        "std": 0.002409736190764843
+      },
+      "f1": {
+        "mean": 0.02059818072293158,
+        "std": 0.005187492119101399
+      },
+      "precision": {
+        "mean": 0.3465987186308415,
+        "std": 0.042593101314631183
+      },
+      "recall": {
+        "mean": 0.010619749564114758,
+        "std": 0.002717772737277262
+      },
+      "flagged_fraction": {
+        "mean": 0.01075572634116938,
+        "std": 0.001368998064391698
+      },
+      "oracle_best_f1": {
+        "mean": 0.525655090255908,
+        "std": 1.0322833862474674e-05
+      }
+    },
+    "PCA reconstruction": {
+      "auroc": {
+        "mean": 0.5961563674949575,
+        "std": 0.0
+      },
+      "auprc": {
+        "mean": 0.49325862682357113,
+        "std": 0.0
+      },
+      "f1": {
+        "mean": 0.38591829956824975,
+        "std": 0.0
+      },
+      "precision": {
+        "mean": 0.6398678414096917,
+        "std": 0.0
+      },
+      "recall": {
+        "mean": 0.2762719923918212,
+        "std": 0.0
+      },
+      "flagged_fraction": {
+        "mean": 0.15393309222423146,
+        "std": 0.0
+      },
+      "oracle_best_f1": {
+        "mean": 0.5259077076993621,
+        "std": 0.0
+      }
+    }
+  },
+  "runs": {
+    "Isolation Forest": [
+      {
+        "threshold": 2.3217456580638767,
+        "f1": 0.017879161528976572,
+        "precision": 0.3240223463687151,
+        "recall": 0.009193216040576954,
+        "flagged_fraction": 0.010115280289330923,
+        "auroc": 0.4841907393763773,
+        "auprc": 0.34691247468864417,
+        "oracle_best_f1": 0.5256404915642574
+      },
+      {
+        "threshold": 2.2641756834323425,
+        "f1": 0.016056816427358345,
+        "precision": 0.30952380952380953,
+        "recall": 0.008242193691551752,
+        "flagged_fraction": 0.00949367088607595,
+        "auroc": 0.48920988015924094,
+        "auprc": 0.34931649526897124,
+        "oracle_best_f1": 0.5256623896017331
+      },
+      {
+        "threshold": 2.3947925112307447,
+        "f1": 0.02785856421245982,
+        "precision": 0.40625,
+        "recall": 0.014423838960215565,
+        "flagged_fraction": 0.012658227848101266,
+        "auroc": 0.4903828383463982,
+        "auprc": 0.3527831295441919,
+        "oracle_best_f1": 0.5256623896017331
+      }
+    ],
+    "PCA reconstruction": [
+      {
+        "threshold": 2.446787233132914,
+        "f1": 0.38591829956824975,
+        "precision": 0.6398678414096917,
+        "recall": 0.2762719923918212,
+        "flagged_fraction": 0.15393309222423146,
+        "auroc": 0.5961563674949575,
+        "auprc": 0.49325862682357113,
+        "oracle_best_f1": 0.5259077076993621
+      }
+    ]
+  }
+}
